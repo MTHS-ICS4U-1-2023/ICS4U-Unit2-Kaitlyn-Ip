@@ -1,26 +1,30 @@
 /*
- * This program uses a basic class to make an array of strings
+ * This is a program that calculates the area of a circle.
+ *
  * @author Kaitlyn Ip
  * @version 1.0
- * @Since 2024-03-07
+ * @since   2024-01-01
  */
 
-import { BasicClass } from './BasicClass'
-import { createPrompt } from 'bun-promptx'
+import { KaiStack } from './kai-stack.ts'
 
-const basicStack = new BasicClass()
+let fruits = new KaiStack()
+fruits.push("apple")
+fruits.push("banana")
+fruits.push("watermelon")
+console.log("fruits: " + fruits.show())
 
-for (let counter = 0; counter < 3; counter++) {
-// String value
-  const string = createPrompt('Enter a string: ')
 
-  const stringValue = string.value
-  basicStack.push(stringValue)
-}
+let colours = new KaiStack()
+colours.push("red")
+colours.push("green")
+colours.push("blue")
+console.log("colours: " + colours.show())
 
-// Show the stack's value
-const stackValues = basicStack.showStack()
-console.log(stackValues)
+let animals = new KaiStack()
+animals.push("dog")
+animals.push("otter")
+animals.push("duck")
+console.log("animals: " + animals.show())
 
-// Show the program as done
-console.log('\nDone.')
+console.log("\nDone.")
